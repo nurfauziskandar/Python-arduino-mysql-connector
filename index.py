@@ -13,7 +13,7 @@ db = mysql.connector.connect(
     database="dataMonitoring"
 )
 
-#perintah inster data ke dalam tabel database
+#perintah insert data ke dalam tabel database
 def mysqlInsert(data1, data2, data3, data4, data5, data6, data7, data8):
     cursor = db.cursor()
     sql = "INSERT INTO solarcell (time, teganganPV, arusPV, dayaPV, teganganPLN, arusPLN, dayaPLN, suhu) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
@@ -22,7 +22,7 @@ def mysqlInsert(data1, data2, data3, data4, data5, data6, data7, data8):
     db.commit()
     print("{} data ditambahkan".format(cursor.rowcount))
 
-#invinity loop 
+#infinity loop untuk kirim data ke database
 while True:
     x = datetime.datetime.now()
     time = x.strftime("%X")
