@@ -22,7 +22,7 @@ def mysqlInsert(data1, data2, data3, data4, data5, data6, data7, data8):
     db.commit()
     print("{} data ditambahkan".format(cursor.rowcount))
 
-#infinity loop untuk kirim data ke databases
+#infinity loop untuk kirim data ke database
 while True:
     x = datetime.datetime.now()
     time = x.strftime("%X")
