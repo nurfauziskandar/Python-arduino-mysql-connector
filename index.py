@@ -2,7 +2,7 @@ import serial
 import mysql.connector
 import datetime
 
-#Konfigurasi koneksi serial arduino
+#Konfigurasi koneksi serial arduino (MACOS ONLY)
 arduino = serial.Serial("/dev/cu.usbserial-1410", 115200)
 
 #Konfigurasi koneksi database
