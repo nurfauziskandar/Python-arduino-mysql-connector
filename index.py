@@ -12,6 +12,8 @@ db = mysql.connector.connect(
     passwd="",
     database="dataMonitoring"
 )
+
+#perintah inster data ke dalam tabel database
 def mysqlInsert(data1, data2, data3, data4, data5, data6, data7, data8):
     cursor = db.cursor()
     sql = "INSERT INTO solarcell (time, teganganPV, arusPV, dayaPV, teganganPLN, arusPLN, dayaPLN, suhu) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
